@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://braycedominic.com/sitemap.xml",
+    sitemap: "https://www.braycedominic.com/sitemap.xml",
   };
 }

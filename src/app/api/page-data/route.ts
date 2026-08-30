@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { projects } from "@/lib/projects-data";
 
 const experienceData = [
     {
@@ -53,17 +54,10 @@ const educationData = [
 
 
 const projectOverview = {
-    caseStudies: [
-        { name: "BuyTena", url: "https://buytena.braycedominic.com/" },
-        { name: "MediLink Tanzania", url: "https://ichh.or.tz/medilink/" },
-        { name: "Barbra's Kitchen", url: "https://ichh.or.tz/barbraskitchen/" },
-        { name: "LYCUS Technologies", url: "https://lycustechnologies.netlify.app/" },
-        { name: "AMSO Foundation", url: "https://amsofoundation.netlify.app/" },
-        { name: "WASHABANDO WiFi", url: "https://washabando.netlify.app/" },
-        { name: "ICHH Tanzania", url: "https://ichh.or.tz/" },
-        { name: "Bureau Exchange", url: "https://github.com/BrayceDominic/bureau-exchange/releases" },
-        { name: "UniSafari Hub", url: "https://unisafarihub.netlify.app/" },
-    ],
+    caseStudies: projects.map((p) => ({
+        name: p.name,
+        url: `/projects/${p.slug}`,
+    })),
     sideProjects: []
 };
 

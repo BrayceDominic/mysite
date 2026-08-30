@@ -9,7 +9,7 @@ import ProjectOverview from "./components/home/project-overview"
 
 const page = () => {
   return (
-    <main>
+    <>
       <HeroSection/>
       <Divider/>
       <AboutMe/>
@@ -24,7 +24,7 @@ const page = () => {
       <Divider/>
       <Contact/>
       <Divider/>
-    </main>
+    </>
   )
 }
 

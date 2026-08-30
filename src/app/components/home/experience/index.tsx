@@ -21,7 +21,7 @@ const Experience = () => {
     }, [])
 
     return (
-        <section>
+        <section id="process">
             <div className="container">
                 <div className="border-x border-primary/10">
                     <div className="flex flex-col max-w-3xl mx-auto py-10 px-4 sm:px-7">

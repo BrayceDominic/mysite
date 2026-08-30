@@ -7,3 +7,10 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+# Enforce www: redirect the apex (braycedominic.com) to www.braycedominic.com
+[[redirects]]
+  from = "https://braycedominic.com/*"
+  to = "https://www.braycedominic.com/:splat"
+  status = 301
+  force = true
