@@ -1,8 +1,8 @@
 "use client";
-import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
+import ProjectImage from "./project-image";
 
 const FeaturedWork = () => {
     const [featureWork, setFeatureWork] = useState<any>(null);
@@ -46,12 +46,10 @@ const FeaturedWork = () => {
                                     className={`group flex flex-col gap-3.5 sm:gap-5 p-3.5 sm:p-6 ${isRightCol ? 'md:border-l md:border-primary/10' : ''}`}
                                 >
                                     <Link href={value?.url} target="_blank" className="overflow-hidden">
-                                        <Image
-                                            src={value?.image}
-                                            alt="Image"
-                                            width={490}
-                                            height={300}
-                                            className="w-full h-full group-hover:scale-105 transition-all duration-300 ease-in-out"
+                                        <ProjectImage
+                                            liveUrl={value?.url}
+                                            fallback={value?.image}
+                                            alt={value?.title}
                                         />
                                     </Link>
                                     <div className="flex flex-col gap-1 sm:gap-2 px-2">

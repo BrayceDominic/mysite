@@ -234,4 +234,9 @@ export const projects: Project[] = [
 export const getProjectBySlug = (slug: string) =>
   projects.find((p) => p.slug === slug);
 
+export const getMicrolinkScreenshot = (siteUrl: string) =>
+  `https://api.microlink.io/?url=${encodeURIComponent(
+    siteUrl
+  )}&screenshot=true&meta=false&type=png&waitUntil=networkidle2`;
+
 export { baseUrl };

@@ -47,7 +47,7 @@ export const metadata: Metadata = {
       "Full-stack & mobile engineer building web apps, mobile apps, and backend systems with real revenue impact in East Africa.",
     images: [
       {
-        url: "/og-image.svg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Brayce Dominic — Full-Stack & Mobile Software Engineer",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     title: "Brayce Dominic — Full-Stack & Mobile Software Engineer",
     description:
       "Full-stack & mobile engineer building web apps, mobile apps, and backend systems with real revenue impact in East Africa.",
-    images: ["/og-image.svg"],
+    images: ["/og-image.png"],
     creator: "@novyrab",
   },
   robots: {
