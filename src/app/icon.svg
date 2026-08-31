@@ -1,31 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <rect width="512" height="512" rx="96" fill="#000000"/>
-
-  <!-- Letter B (left, leaning right toward D so they cuddle) -->
-  <g transform="translate(232 274) rotate(10)">
-    <text
-      text-anchor="middle"
-      dominant-baseline="middle"
-      font-family="Arial, Helvetica, sans-serif"
-      font-size="360"
-      font-weight="900"
-      fill="#FFFFFF"
-    >
-      B
-    </text>
-  </g>
-
-  <!-- Letter D (right, leaning left toward B so they cuddle) -->
-  <g transform="translate(288 274) rotate(-10)">
-    <text
-      text-anchor="middle"
-      dominant-baseline="middle"
-      font-family="Arial, Helvetica, sans-serif"
-      font-size="360"
-      font-weight="900"
-      fill="#FFFFFF"
-    >
-      D
-    </text>
-  </g>
+  <text
+    text-anchor="middle"
+    dominant-baseline="central"
+    x="256"
+    y="268"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="240"
+    font-weight="800"
+    letter-spacing="4"
+    fill="#FFFFFF"
+  >
+    BD
+  </text>
 </svg>
