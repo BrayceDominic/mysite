@@ -37,8 +37,10 @@ const HeroSection = () => {
         <section>
             <div className="container">
                 <div className="">
-                    <div className="w-full h-72">
-                        <Image src={"/images/hero-sec/banner-bg-img.svg"} alt="banner-img" width={1080} height={267} className="w-full h-full object-cover" />
+                    <div className="w-full h-72 relative">
+                        <Image src={"/ptn-03.png"} alt="" fill priority sizes="100vw" className="object-cover" />
+                        <div className="absolute inset-0 bg-black/60" aria-hidden />
+                        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/70" aria-hidden />
                     </div>
                     <div className="border-x border-primary/10">
                         <div className="relative flex flex-col xs:flex-row items-center xs:items-start justify-center xs:justify-between max-w-3xl mx-auto gap-10 xs:gap-3 px-4 sm:px-7 pt-22 pb-8 sm:pb-12">
@@ -48,8 +50,9 @@ const HeroSection = () => {
                             </div>
                             <div className="flex flex-col gap-2 sm:gap-3 items-center text-center xs:items-start">
                                 <h1>Brayce Dominic</h1>
-                                <p className="text-white font-normal">Web & Mobile App Developer</p>
-                                <p className="max-w-xl text-center xs:text-left font-medium text-secondary">I build SaaS platforms, mobile apps & M-Pesa-powered solutions for East Africa.</p>
+                                <p className="text-white font-normal">Fullstack Software Developer</p>
+                                <p className="italic text-secondary/70 text-center xs:text-left">Web & mobile app developer, systems designer and solutions architect</p>
+                                <p className="max-w-xl text-center xs:text-left font-medium text-secondary">I build modern web applications, mobile apps, and custom software systems for growing businesses across East Africa.</p>
                                 <div className="flex items-center gap-2">
                                     <Image src={"/images/icon/map-icon.svg"} alt="map-icon" width={20} height={20} />
                                     <p className="text-primary">Dar es Salaam, Tanzania</p>
@@ -59,19 +62,19 @@ const HeroSection = () => {
                                 <div className="flex items-center gap-2">
                                     {socialIcon?.map((value, index) => {
                                         return (
-                                            <Link href={value?.href} target="_blank" key={index} className="w-11 h-11 flex items-center justify-center hover:bg-primary/5 border border-primary/10 rounded-full">
+                                            <Link href={value?.href} target="_blank" key={index} className="w-11 h-11 flex items-center justify-center hover:bg-primary/5 border border-primary/10 rounded-lg">
                                                 {value?.svg}
                                             </Link>
                                         )
                                     })}
                                 </div>
-                                <Button asChild className="h-auto rounded-full p-0.5!">
+                                <Button asChild className="h-auto rounded-lg p-0.5!">
                                     <Link
                                         href="https://drive.google.com/uc?export=download&id=1GEpRGFasU7wkCjWIPdgXPLAIvNM3Q8wP"
                                         target="_blank"
-                                        className="inline-block rounded-full bg-white"
+                                        className="inline-block rounded-lg bg-white"
                                     >
-                                        <span className="flex items-center gap-3 bg-white hover:bg-white/80 py-2.5 px-5 rounded-full">
+                                        <span className="flex items-center gap-3 bg-white hover:bg-white/80 py-2.5 px-5 rounded-lg">
                                             <Image
                                                 src="/images/icon/spark-icon.svg"
                                                 alt="spark-icon"

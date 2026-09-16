@@ -6,6 +6,7 @@ const featureWork = projects.map((p) => ({
   description: p.summary,
   roles: p.roles,
   image: p.image,
+  alt: p.alt,
   url: p.liveUrl,
   type: p.type,
   preview: p.preview !== false,

@@ -52,7 +52,7 @@ const Navbar = () => {
             <Link
               href="https://drive.google.com/uc?export=download&id=1GEpRGFasU7wkCjWIPdgXPLAIvNM3Q8wP"
               target="_blank"
-              className="inline-flex items-center rounded-full bg-white px-4 py-2 text-sm font-medium text-black hover:bg-white/80 transition-colors"
+              className="inline-flex items-center rounded-lg bg-white px-4 py-2 text-sm font-medium text-black hover:bg-white/80 transition-colors"
             >
               Download CV
             </Link>
@@ -90,7 +90,7 @@ const Navbar = () => {
               href="https://drive.google.com/uc?export=download&id=1GEpRGFasU7wkCjWIPdgXPLAIvNM3Q8wP"
               target="_blank"
               onClick={handleNav}
-              className="inline-flex w-fit items-center rounded-full bg-white px-4 py-2 text-sm font-medium text-black hover:bg-white/80 transition-colors"
+              className="inline-flex w-fit items-center rounded-lg bg-white px-4 py-2 text-sm font-medium text-black hover:bg-white/80 transition-colors"
             >
               Download CV
             </Link>

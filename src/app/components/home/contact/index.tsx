@@ -12,8 +12,8 @@ const Contact = () => {
         },
         {
             label: "WhatsApp",
-            value: "+255764827493",
-            href: "https://wa.me/255764827493"
+            value: "+255 750 630 671",
+            href: "https://wa.me/255750630671"
         },
         {
             label: "LinkedIn",
@@ -86,7 +86,7 @@ const Contact = () => {
                                         key={index}
                                         href={item.href}
                                         target={item.href.startsWith("mailto") ? undefined : "_blank"}
-                                        className="flex flex-col gap-1 border border-primary/10 rounded-xl p-4 hover:bg-primary/5 transition-colors"
+                                        className="flex flex-col gap-1 border border-primary/10 rounded-lg p-4 hover:bg-primary/5 transition-colors"
                                     >
                                         <p className="text-sm text-primary uppercase font-medium">{item.label}</p>
                                         <p className="font-medium">{item.value}</p>
@@ -97,7 +97,7 @@ const Contact = () => {
 
                         <form
                             onSubmit={handleSubmit}
-                            className="border border-primary/10 rounded-xl p-6 sm:p-8 flex flex-col gap-4 bg-muted/20"
+                            className="border border-primary/10 rounded-lg p-6 sm:p-8 flex flex-col gap-4 bg-muted/20"
                         >
                             <p className="text-sm text-primary uppercase font-medium">Send an inquiry</p>
 
@@ -169,12 +169,12 @@ const Contact = () => {
                             <p className="text-sm text-secondary">No spam. Just a reply within 24 hours.</p>
                         </form>
 
-                        <div className="border border-primary/10 rounded-xl p-6 sm:p-8 flex flex-col gap-4 bg-muted/30 mt-8">
+                        <div className="border border-primary/10 rounded-lg p-6 sm:p-8 flex flex-col gap-4 bg-muted/30 mt-8">
                             <p className="text-sm text-primary uppercase font-medium">Open for projects</p>
                             <h3 className="text-xl sm:text-2xl">Have a project in mind? Let&apos;s ship it.</h3>
                             <div className="flex flex-col sm:flex-row gap-3">
                                 <Button asChild className="h-auto">
-                                    <Link href="https://wa.me/255764827493" target="_blank" className="py-3 px-5">
+                                    <Link href="https://wa.me/255750630671" target="_blank" className="py-3 px-5">
                                         Start a conversation
                                     </Link>
                                 </Button>

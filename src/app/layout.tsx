@@ -4,6 +4,8 @@ import "./globals.css";
 import Header from "./components/layout/header";
 import Footer from "./components/layout/footer";
 import Loader from "./components/loader";
+import WhatsAppButton from "./components/WhatsAppButton";
+import BackToTop from "./components/BackToTop";
 
 const inter = Inter({
   variable: "--font-inter-sans",
@@ -17,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | Brayce Dominic",
   },
   description:
-    "Web & mobile app developer in Dar es Salaam building SaaS platforms, M-Pesa-payment systems, event-tech, food-ordering, and POS apps for East Africa. Flutter, Next.js, React, and Node.js.",
+    "Web & mobile engineer in Dar es Salaam crafting revenue-grade SaaS, mobile-money payment systems, event-tech, food-ordering, and POS experiences for East Africa. Flutter, Next.js, React, and Node.js.",
   keywords: [
     "Brayce Dominic",
     "Web Developer Dar es Salaam",
@@ -25,11 +27,13 @@ export const metadata: Metadata = {
     "Flutter Developer",
     "Next.js Developer",
     "React Developer",
-    "M-Pesa Integration",
+    "Mobile Money Integration",
+    "Payment Integration Tanzania",
     "SaaS Development Tanzania",
     "Event Management Platform",
     "POS App Development",
     "Food Ordering App",
+    "Loyalty Software",
     "PropTech Marketplace",
   ],
   authors: [{ name: "Brayce Dominic", url: "https://www.braycedominic.com" }],
@@ -45,8 +49,8 @@ export const metadata: Metadata = {
     url: "https://www.braycedominic.com/",
     siteName: "Brayce Dominic",
     title: "Brayce Dominic, Web & Mobile App Developer in Tanzania",
-    description:
-      "Web & mobile app developer in Dar es Salaam building SaaS, M-Pesa-payment systems, event-tech, and POS apps for East Africa. Flutter, Next.js, React, and Node.js.",
+description:
+      "Web & mobile engineer in Dar es Salaam crafting revenue-grade SaaS, mobile-money payment systems, event-tech, and POS experiences for East Africa. Flutter, Next.js, React, and Node.js.",
     images: [
       {
         url: "/og-image.png",
@@ -60,7 +64,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Brayce Dominic, Web & Mobile App Developer in Tanzania",
     description:
-      "Web & mobile app developer in Dar es Salaam building SaaS, M-Pesa-payment systems, event-tech, and POS apps for East Africa. Flutter, Next.js, React, and Node.js.",
+      "Web & mobile engineer in Dar es Salaam crafting revenue-grade SaaS, mobile-money payment systems, event-tech, and POS experiences for East Africa. Flutter, Next.js, React, and Node.js.",
     images: ["/og-image.png"],
     creator: "@novyrab",
   },
@@ -88,9 +92,9 @@ export default function RootLayout({
     name: "Brayce Dominic",
     url: "https://www.braycedominic.com/",
     email: "mailto:braycedominic@gmail.com",
-    jobTitle: "Web & Mobile App Developer",
+    jobTitle: "Fullstack Software Developer",
     description:
-      "Web & mobile app developer in Dar es Salaam, Tanzania building SaaS platforms, M-Pesa payment systems, event-tech, food-ordering, and POS apps for East Africa.",
+      "Web & mobile engineer in Dar es Salaam, Tanzania crafting SaaS platforms, mobile-money payment systems, event-tech, food-ordering, and POS experiences for East Africa.",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Dar es Salaam",
@@ -107,7 +111,7 @@ export default function RootLayout({
       "Next.js",
       "React",
       "Node.js",
-      "M-Pesa Integration",
+      "Mobile Money Integration",
       "SaaS Development",
       "Mobile App Development",
       "Point of Sale Systems",
@@ -141,6 +145,8 @@ export default function RootLayout({
         <Header/>
         <main id="main">{children}</main>
         <Footer/>
+        <WhatsAppButton/>
+        <BackToTop/>
       </body>
     </html>
   );

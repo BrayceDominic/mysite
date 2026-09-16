@@ -51,8 +51,33 @@ const ProjectPage = async ({
   const project = getProjectBySlug(slug);
   if (!project) return notFound();
 
+  const projectJsonLd =
+    project.type === "Mobile"
+      ? {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: project.name,
+          description: project.summary,
+          applicationCategory: "BusinessApplication",
+          operatingSystem: "Android",
+          url: `${baseUrl}/projects/${project.slug}`,
+          author: { "@type": "Person", name: "Brayce Dominic", url: `${baseUrl}/` },
+        }
+      : {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: project.name,
+          description: project.summary,
+          url: project.liveUrl,
+          creator: { "@type": "Person", name: "Brayce Dominic", url: `${baseUrl}/` },
+        };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(projectJsonLd) }}
+      />
       <section>
         <div className="container">
           <div className="border-x border-primary/10">
@@ -69,7 +94,7 @@ const ProjectPage = async ({
                   <p className="text-sm tracking-[2px] text-primary uppercase font-medium">
                     {project.category}
                   </p>
-                  <span className="text-xs border border-primary/10 rounded-full px-2.5 py-0.5 text-secondary">
+                  <span className="text-xs border border-primary/10 rounded-md px-2.5 py-0.5 text-secondary">
                     {project.type} {project.year}
                   </span>
                 </div>
@@ -80,7 +105,7 @@ const ProjectPage = async ({
               <div className="overflow-hidden rounded-2xl border border-primary/10 mb-8">
                 <Image
                   src={project.image}
-                  alt={`${project.name}, ${project.tagline}`}
+                  alt={project.alt}
                   width={900}
                   height={560}
                   priority
@@ -92,7 +117,7 @@ const ProjectPage = async ({
                 {project.metrics.map((m, i) => (
                   <div
                     key={i}
-                    className="rounded-xl border border-primary/10 p-5 bg-muted/20"
+                    className="rounded-lg border border-primary/10 p-5 bg-muted/20"
                   >
                     <p className="text-2xl sm:text-3xl font-semibold text-primary">
                       {m.value}

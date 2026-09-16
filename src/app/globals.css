@@ -106,6 +106,10 @@ body {
   .animate-preview-pop {
     animation: preview-pop 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
+
+  .price-tag {
+    clip-path: polygon(14px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 14px);
+  }
 }
 
 @layer base {
