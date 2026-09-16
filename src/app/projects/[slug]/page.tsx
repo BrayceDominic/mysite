@@ -21,15 +21,23 @@ export async function generateMetadata({
   if (!project) return {};
 
   return {
-    title: project.name,
+    title: `${project.name}, ${project.tagline}`,
     description: project.summary,
     alternates: { canonical: `/projects/${project.slug}` },
     openGraph: {
       type: "website",
       url: `${baseUrl}/projects/${project.slug}`,
-      title: `${project.name} — Brayce Dominic`,
+      title: `${project.name}, ${project.tagline} | Brayce Dominic`,
       description: project.summary,
       siteName: "Brayce Dominic",
+      images: [
+        {
+          url: "/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: `${project.name}, ${project.tagline}`,
+        },
+      ],
     },
   };
 }
@@ -57,9 +65,14 @@ const ProjectPage = async ({
               </Link>
 
               <div className="flex flex-col gap-3 mb-8">
-                <p className="text-sm tracking-[2px] text-primary uppercase font-medium">
-                  {project.category}
-                </p>
+                <div className="flex items-center gap-2">
+                  <p className="text-sm tracking-[2px] text-primary uppercase font-medium">
+                    {project.category}
+                  </p>
+                  <span className="text-xs border border-primary/10 rounded-full px-2.5 py-0.5 text-secondary">
+                    {project.type} {project.year}
+                  </span>
+                </div>
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl">{project.name}</h1>
                 <p className="text-lg text-secondary font-normal">{project.tagline}</p>
               </div>
@@ -67,7 +80,7 @@ const ProjectPage = async ({
               <div className="overflow-hidden rounded-2xl border border-primary/10 mb-8">
                 <Image
                   src={project.image}
-                  alt={`${project.name} — ${project.tagline}`}
+                  alt={`${project.name}, ${project.tagline}`}
                   width={900}
                   height={560}
                   priority
@@ -131,10 +144,14 @@ const ProjectPage = async ({
                 <Button asChild className="h-auto">
                   <Link
                     href={project.liveUrl}
-                    target="_blank"
+                    target={project.liveUrl.startsWith("http") ? "_blank" : undefined}
                     className="py-3 px-5"
                   >
-                    View live project
+                    {project.type === "Mobile"
+                      ? project.liveUrl.startsWith("http")
+                        ? "Download APK"
+                        : "Request App Details"
+                      : "View live project"}
                   </Link>
                 </Button>
                 <Button asChild variant="outline" className="h-auto">

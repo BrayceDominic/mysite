@@ -29,7 +29,7 @@ const experienceData = [
         startYear: "Step",
         endYear: "03",
         bulletPoints: [
-            "Weekly demos — you see progress, not just promises."
+            "Weekly demos, so you see progress, not just promises."
         ]
     },
     {
@@ -54,10 +54,18 @@ const educationData = [
 
 
 const projectOverview = {
-    caseStudies: projects.map((p) => ({
-        name: p.name,
-        url: `/projects/${p.slug}`,
-    })),
+    webProjects: projects
+        .filter((p) => p.type === "Web")
+        .map((p) => ({
+            name: p.name,
+            url: `/projects/${p.slug}`,
+        })),
+    mobileApps: projects
+        .filter((p) => p.type === "Mobile")
+        .map((p) => ({
+            name: p.name,
+            url: `/projects/${p.slug}`,
+        })),
     sideProjects: []
 };
 

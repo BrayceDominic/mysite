@@ -26,9 +26,23 @@ const ProjectOverview = () => {
                 <div className="border-x border-primary/10">
                     <div className="flex flex-col max-w-3xl mx-auto gap-10 sm:gap-16 px-4 sm:px-7 py-9 md:py-16 ">
                         <div className="flex flex-col xs:flex-row items-start gap-5 xs:gap-10 md:gap-28 lg:gap-5">
-                            <p className="max-w-fit lg:max-w-2xs w-full text-sm tracking-[2px] text-primary uppercase font-medium">Case studies</p>
+                            <p className="max-w-fit lg:max-w-2xs w-full text-sm tracking-[2px] text-primary uppercase font-medium">Web Projects</p>
                             <div className="flex flex-col gap-2.5">
-                                {projectData?.caseStudies?.map((value: any, index: any) => {
+                                {projectData?.webProjects?.map((value: any, index: any) => {
+                                    return (
+                                        <Link key={index} href={value?.url} className="group flex items-center gap-2">
+                                            <h4>{value?.name}</h4>
+                                            <Image src={"/images/icon/tile-arrow-icon.svg"} alt="tile-icon" width={24} height={24} className="group-hover:translate-x-1.5 group-hover:rotate-45 transition-all duration-300 ease-in" />
+                                        </Link>
+                                    )
+                                })}
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col xs:flex-row items-start gap-5 xs:gap-10 md:gap-28 lg:gap-5">
+                            <p className="max-w-fit lg:max-w-2xs w-full text-sm tracking-[2px] text-primary uppercase font-medium">Mobile Apps</p>
+                            <div className="flex flex-col gap-2.5">
+                                {projectData?.mobileApps?.map((value: any, index: any) => {
                                     return (
                                         <Link key={index} href={value?.url} className="group flex items-center gap-2">
                                             <h4>{value?.name}</h4>

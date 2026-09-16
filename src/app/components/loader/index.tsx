@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const Loader = () => {
     const [loading, setLoading] = useState(true);
     const [typed, setTyped] = useState("");
-    const fullText = "BRAYCE DOMINIC | SOFTWARE DEVELOPER";
+    const fullText = "BRAYCE DOMINIC | WEB & MOBILE APP DEVELOPER";
 
     useEffect(() => {
         let index = 0;

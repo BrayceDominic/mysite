@@ -43,13 +43,13 @@ const HeroSection = () => {
                     <div className="border-x border-primary/10">
                         <div className="relative flex flex-col xs:flex-row items-center xs:items-start justify-center xs:justify-between max-w-3xl mx-auto gap-10 xs:gap-3 px-4 sm:px-7 pt-22 pb-8 sm:pb-12">
                             <div className="absolute top-0 transform -translate-y-1/2">
-                                <Image src={"/images/hero-sec/user-img.svg"} alt="user-img" width={145} height={145} className="border-4 border-white rounded-full" />
+                                <Image src={"/images/hero-sec/profile.jpg"} alt="Brayce Dominic" width={145} height={145} className="w-36 h-36 border-4 border-white rounded-full object-cover" />
                                 <span className="absolute bottom-2.5 right-5 w-4 h-4 bg-white border-2 border-black rounded-full" />
                             </div>
                             <div className="flex flex-col gap-2 sm:gap-3 items-center text-center xs:items-start">
                                 <h1>Brayce Dominic</h1>
-                                <p className="text-white font-normal">Full-Stack & Mobile Engineer</p>
-                                <p className="max-w-xl text-center xs:text-left font-medium text-secondary">I ship production software for East Africa.</p>
+                                <p className="text-white font-normal">Web & Mobile App Developer</p>
+                                <p className="max-w-xl text-center xs:text-left font-medium text-secondary">I build SaaS platforms, mobile apps & M-Pesa-powered solutions for East Africa.</p>
                                 <div className="flex items-center gap-2">
                                     <Image src={"/images/icon/map-icon.svg"} alt="map-icon" width={20} height={20} />
                                     <p className="text-primary">Dar es Salaam, Tanzania</p>

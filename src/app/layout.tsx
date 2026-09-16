@@ -13,22 +13,24 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.braycedominic.com"),
   title: {
-    default: "Brayce Dominic — Full-Stack & Mobile Software Engineer in Tanzania",
+    default: "Brayce Dominic, Web & Mobile App Developer in Dar es Salaam, Tanzania",
     template: "%s | Brayce Dominic",
   },
   description:
-    "Full-stack & mobile engineer building web apps, mobile apps, and backend systems with real revenue impact in East Africa. From M-Pesa billing platforms to healthcare portals.",
+    "Web & mobile app developer in Dar es Salaam building SaaS platforms, M-Pesa-payment systems, event-tech, food-ordering, and POS apps for East Africa. Flutter, Next.js, React, and Node.js.",
   keywords: [
     "Brayce Dominic",
-    "Full-Stack Engineer",
-    "Software Developer Tanzania",
-    "Mobile App Developer",
-    "M-Pesa Integration",
     "Web Developer Dar es Salaam",
+    "Mobile App Developer Tanzania",
     "Flutter Developer",
-    "Healthcare Portals",
-    "E-Commerce Development",
+    "Next.js Developer",
     "React Developer",
+    "M-Pesa Integration",
+    "SaaS Development Tanzania",
+    "Event Management Platform",
+    "POS App Development",
+    "Food Ordering App",
+    "PropTech Marketplace",
   ],
   authors: [{ name: "Brayce Dominic", url: "https://www.braycedominic.com" }],
   creator: "Brayce Dominic",
@@ -42,23 +44,23 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.braycedominic.com/",
     siteName: "Brayce Dominic",
-    title: "Brayce Dominic — Full-Stack & Mobile Software Engineer",
+    title: "Brayce Dominic, Web & Mobile App Developer in Tanzania",
     description:
-      "Full-stack & mobile engineer building web apps, mobile apps, and backend systems with real revenue impact in East Africa.",
+      "Web & mobile app developer in Dar es Salaam building SaaS, M-Pesa-payment systems, event-tech, and POS apps for East Africa. Flutter, Next.js, React, and Node.js.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Brayce Dominic — Full-Stack & Mobile Software Engineer",
+        alt: "Brayce Dominic, Web & Mobile App Developer in Tanzania",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Brayce Dominic — Full-Stack & Mobile Software Engineer",
+    title: "Brayce Dominic, Web & Mobile App Developer in Tanzania",
     description:
-      "Full-stack & mobile engineer building web apps, mobile apps, and backend systems with real revenue impact in East Africa.",
+      "Web & mobile app developer in Dar es Salaam building SaaS, M-Pesa-payment systems, event-tech, and POS apps for East Africa. Flutter, Next.js, React, and Node.js.",
     images: ["/og-image.png"],
     creator: "@novyrab",
   },
@@ -86,7 +88,9 @@ export default function RootLayout({
     name: "Brayce Dominic",
     url: "https://www.braycedominic.com/",
     email: "mailto:braycedominic@gmail.com",
-    jobTitle: "Full-Stack & Mobile Software Engineer",
+    jobTitle: "Web & Mobile App Developer",
+    description:
+      "Web & mobile app developer in Dar es Salaam, Tanzania building SaaS platforms, M-Pesa payment systems, event-tech, food-ordering, and POS apps for East Africa.",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Dar es Salaam",
@@ -96,6 +100,18 @@ export default function RootLayout({
       "https://github.com/BrayceDominic",
       "https://twitter.com/novyrab",
       "https://linkedin.com/in/brayce-dominic-9652a8263",
+    ],
+    knowsAbout: [
+      "Flutter",
+      "Dart",
+      "Next.js",
+      "React",
+      "Node.js",
+      "M-Pesa Integration",
+      "SaaS Development",
+      "Mobile App Development",
+      "Point of Sale Systems",
+      "Event Management Software",
     ],
   };
 

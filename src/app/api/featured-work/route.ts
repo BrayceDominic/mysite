@@ -2,11 +2,13 @@ import { NextResponse } from "next/server";
 import { projects } from "@/lib/projects-data";
 
 const featureWork = projects.map((p) => ({
-  title: `${p.name} — ${p.tagline}`,
+  title: `${p.name}, ${p.tagline}`,
   description: p.summary,
   roles: p.roles,
   image: p.image,
   url: p.liveUrl,
+  type: p.type,
+  preview: p.preview !== false,
   caseStudy: `/projects/${p.slug}`,
 }));
 
